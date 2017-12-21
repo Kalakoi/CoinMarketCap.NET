@@ -187,62 +187,74 @@ namespace Kalakoi.Crypto.CoinMarketCap
                         else if (jtr.Value.ToString() == "rank")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Rank = Convert.ToInt32(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Rank = Convert.ToInt32(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "price_usd")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PriceUSD = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PriceUSD = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "price_btc")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PriceBTC = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PriceBTC = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "24h_volume_usd")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Volume24HourUSD = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Volume24HourUSD = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "market_cap_usd")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.MarketCapUSD = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.MarketCapUSD = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "available_supply")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.AvailableSupply = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.AvailableSupply = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "total_supply")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.TotalSupply = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.TotalSupply = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "max_supply")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.MaxSupply = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.MaxSupply = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "percent_change_1h")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PercentChange1Hour = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PercentChange1Hour = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "percent_change_24h")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PercentChange24Hour = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PercentChange24Hour = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "percent_change_7d")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PercentChange7Day = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PercentChange7Day = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "last_updated")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.LastUpdated = Convert.ToInt32(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.LastUpdated = Convert.ToInt32(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "error")
                         {
@@ -252,17 +264,20 @@ namespace Kalakoi.Crypto.CoinMarketCap
                         else if (jtr.Value.ToString() == string.Format("price_{0}", currency.ToString().ToLower()))
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Price = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Price = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == string.Format("24h_volume_{0}", currency.ToString().ToLower()))
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Volume24Hour = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Volume24Hour = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == string.Format("market_cap_{0}", currency.ToString().ToLower()))
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.MarketCap = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.MarketCap = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else continue;
                     }
@@ -310,62 +325,74 @@ namespace Kalakoi.Crypto.CoinMarketCap
                         else if (jtr.Value.ToString() == "rank")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Rank = Convert.ToInt32(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Rank = Convert.ToInt32(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "price_usd")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PriceUSD = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PriceUSD = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "price_btc")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PriceBTC = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PriceBTC = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "24h_volume_usd")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Volume24HourUSD = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Volume24HourUSD = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "market_cap_usd")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.MarketCapUSD = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.MarketCapUSD = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "available_supply")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.AvailableSupply = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.AvailableSupply = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "total_supply")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.TotalSupply = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.TotalSupply = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "max_supply")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.MaxSupply = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.MaxSupply = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "percent_change_1h")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PercentChange1Hour = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PercentChange1Hour = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "percent_change_24h")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PercentChange24Hour = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PercentChange24Hour = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "percent_change_7d")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.PercentChange7Day = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.PercentChange7Day = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "last_updated")
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.LastUpdated = Convert.ToInt32(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.LastUpdated = Convert.ToInt32(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == "error")
                         {
@@ -375,22 +402,31 @@ namespace Kalakoi.Crypto.CoinMarketCap
                         else if (jtr.Value.ToString() == string.Format("price_{0}", currency.ToString().ToLower()))
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Price = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Price = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == string.Format("24h_volume_{0}", currency.ToString().ToLower()))
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.Volume24Hour = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.Volume24Hour = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else if (jtr.Value.ToString() == string.Format("market_cap_{0}", currency.ToString().ToLower()))
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
-                            ToAdd.MarketCap = Convert.ToDouble(jtr.Value.ToString());
+                            if (jtr.Value != null)
+                                ToAdd.MarketCap = Convert.ToDouble(jtr.Value.ToString());
                         }
                         else continue;
                     }
                     else continue;
                 }
+            }
+            if (currency == Currencies.USD)
+            {
+                ToAdd.Price = ToAdd.PriceUSD;
+                ToAdd.Volume24Hour = ToAdd.Volume24HourUSD;
+                ToAdd.MarketCap = ToAdd.MarketCapUSD;
             }
             return ToAdd;
         }
