@@ -87,6 +87,10 @@ namespace Kalakoi.Crypto.CoinMarketCap
         /// Market capitalization in specified currency.
         /// </summary>
         public double MarketCap { get; private set; }
+        /// <summary>
+        /// Error thrown by API, if any.
+        /// </summary>
+        public string Error { get; private set; }
 
         private Ticker() { }
 
@@ -240,6 +244,11 @@ namespace Kalakoi.Crypto.CoinMarketCap
                             await jtr.ReadAsync().ConfigureAwait(false);
                             ToAdd.LastUpdated = Convert.ToInt32(jtr.Value.ToString());
                         }
+                        else if (jtr.Value.ToString() == "error")
+                        {
+                            await jtr.ReadAsync().ConfigureAwait(false);
+                            ToAdd.Error = jtr.Value.ToString();
+                        }
                         else if (jtr.Value.ToString() == string.Format("price_{0}", currency.ToString().ToLower()))
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
@@ -357,6 +366,11 @@ namespace Kalakoi.Crypto.CoinMarketCap
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
                             ToAdd.LastUpdated = Convert.ToInt32(jtr.Value.ToString());
+                        }
+                        else if (jtr.Value.ToString() == "error")
+                        {
+                            await jtr.ReadAsync().ConfigureAwait(false);
+                            ToAdd.Error = jtr.Value.ToString();
                         }
                         else if (jtr.Value.ToString() == string.Format("price_{0}", currency.ToString().ToLower()))
                         {

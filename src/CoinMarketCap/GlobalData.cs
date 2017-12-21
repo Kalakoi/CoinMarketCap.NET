@@ -50,6 +50,10 @@ namespace Kalakoi.Crypto.CoinMarketCap
         /// 24 hour trade volume in specified currency.
         /// </summary>
         public double Total24HourVolume { get; private set; }
+        /// <summary>
+        /// Error thrown by API, if any.
+        /// </summary>
+        public string Error { get; private set; }
 
         private GlobalData() { }
 
@@ -114,6 +118,11 @@ namespace Kalakoi.Crypto.CoinMarketCap
                         {
                             await jtr.ReadAsync().ConfigureAwait(false);
                             data.LastUpdated = Convert.ToInt32(jtr.Value.ToString());
+                        }
+                        else if (jtr.Value.ToString() == "error")
+                        {
+                            await jtr.ReadAsync().ConfigureAwait(false);
+                            data.Error = jtr.Value.ToString();
                         }
                         else if (jtr.Value.ToString() == string.Format("total_market_cap_{0}", currency.ToString().ToLower()))
                         {
